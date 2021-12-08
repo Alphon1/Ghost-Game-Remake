@@ -24,8 +24,8 @@ public class Player_Input : MonoBehaviour
     {
         Move_Input = new Vector2(Input.GetAxis("Horizontal") * Speed, Body.velocity.y);
         Body.velocity = Move_Input;
-        if ( Input.GetButton("Vertical") && Is_Grounded)
-        {          
+        if ( Input.GetButton("Vertical") && Is_Grounded && Body.velocity.y == 0)
+        {   
             Body.AddForce(new Vector2(0, Jump_Force));
             Is_Grounded = false;
         }
