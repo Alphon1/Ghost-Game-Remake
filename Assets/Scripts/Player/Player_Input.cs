@@ -31,7 +31,7 @@ public class Player_Input : MonoBehaviour
         }
         if (gameObject.transform.position.y < 20)
         {
-            Game_Manager.GetComponent<Game_Over>().End_Game();
+            Game_Manager.GetComponent<Game_Over>().End_Game(false);
             gameObject.SetActive(false);
         }
     }

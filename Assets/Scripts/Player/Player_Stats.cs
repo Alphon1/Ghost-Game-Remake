@@ -39,7 +39,7 @@ public class Player_Stats : MonoBehaviour
             Damage_Cooldown = 180;
             if (Current_Health < 1)
             {
-                Game_Manager.GetComponent<Game_Over>().End_Game();
+                Game_Manager.GetComponent<Game_Over>().End_Game(false);
                 gameObject.SetActive(false);
             }
             Health_UI.GetComponent<Health_Display>().Update_Display(Current_Health);
