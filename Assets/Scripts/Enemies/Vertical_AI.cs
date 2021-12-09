@@ -7,7 +7,7 @@ public class Vertical_AI : MonoBehaviour
     private bool Going_Down = true;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Going_Down)
         {

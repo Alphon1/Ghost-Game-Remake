@@ -12,7 +12,7 @@ public class Ground_Detection : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Player_Input.Is_Grounded == false)
+        if (Player_Input.Is_Grounded == false && collision.gameObject.tag == "Terrain")
         {
             Player_Input.Is_Grounded = true;
         }
