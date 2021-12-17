@@ -11,6 +11,8 @@ public class Player_Stats : MonoBehaviour
     private GameObject Health_UI;
     private float Damage_Cooldown;
     private bool Iframes;
+    [SerializeField]
+    private GameObject Shield;
 
     private void Start()
     {
@@ -25,6 +27,7 @@ public class Player_Stats : MonoBehaviour
             Damage_Cooldown -= 1;
             if (Damage_Cooldown < 1)
             {
+                Shield.SetActive(false);
                 Iframes = false;
             }
         }
@@ -36,6 +39,7 @@ public class Player_Stats : MonoBehaviour
         {
             Current_Health -= 1;
             Iframes = true;
+            Shield.SetActive(true);
             Damage_Cooldown = 180;
             if (Current_Health < 1)
             {
